@@ -39,11 +39,14 @@ GS_BUCKET_NAME = 'altiushubassignmentbucket'
 # Add an unique ID to a file name if same file name exists
 GS_FILE_OVERWRITE = False
 
-GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
-    os.path.join(BASE_DIR, 'gcpCredentials.json'),
-)
 
+# Couldn't figure out how to do this in time
+# GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
+#     os.path.join(BASE_DIR, 'gcpCredentials.json'),
+# )
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 # Application definition
 
 INSTALLED_APPS = [
